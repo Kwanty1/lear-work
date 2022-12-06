@@ -1,0 +1,7 @@
+Admin:
+admin-Логин
+admin-Пароль
+
+User:
+user-Логин
+user-Пароль
