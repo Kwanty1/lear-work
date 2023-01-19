@@ -20,6 +20,9 @@ namespace ToyShopWpf
     /// </summary>
     public partial class Catalog : Page
     {
+        
+        
+
         public Catalog()
         {
             InitializeComponent();
@@ -38,19 +41,51 @@ namespace ToyShopWpf
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CarCheck_Checked(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Функция в разработке", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+
+            DataTransfer.ProductSum += 100;
+            basketCar.Text = "Машинка 100руб.";
+            DataTransfer.NameProduct += "\n" + basketCar.Text;
+            DataTransfer.SumProduct = Convert.ToString(DataTransfer.ProductSum);
+        
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void CarCheck_Unchecked(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Функция в разработке", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            
+            basketCar.Text = "";
+          
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void CarDoll_Checked(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Функция в разработке", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            DataTransfer.ProductSum += 100;
+            basketDoll.Text = "Кукла 100руб.";
+            DataTransfer.NameProduct += "\n" + basketDoll.Text;
+            DataTransfer.SumProduct = Convert.ToString(DataTransfer.ProductSum);
+        }
+
+        private void CarDoll_Unchecked(object sender, RoutedEventArgs e)
+        {
+          
+            basketDoll.Text = "";
+        }
+
+        private void CarPuzle_Checked(object sender, RoutedEventArgs e)
+        {
+
+            DataTransfer.ProductSum += 100;
+            basketPuzle.Text = "Пазл 100руб.";
+            DataTransfer.NameProduct += "\n" + basketPuzle.Text;
+            DataTransfer.SumProduct = Convert.ToString(DataTransfer.ProductSum );
+        }
+
+        private void CarPuzle_Unchecked(object sender, RoutedEventArgs e)
+        {
+
+           
+            basketPuzle.Text = "";
         }
     }
 }

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ToyShopWpf"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Basket" Background="#fadb">
+      Title="Basket" Background="#fadb" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -21,10 +21,19 @@
             <ColumnDefinition Width="400"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        
 
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="в разработке" Grid.Column="1" Grid.Row="1"/>
+        <Button Content="Очистить " x:Name="ButtonSum" Click="ButtonSum_Click"/>
 
+
+
+        <TextBlock TextWrapping="Wrap"  Name="BasketInfo" HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="1"  Width="300" Height="200" FontSize="20" Background="#fadb" FontStyle="Italic">
+            
+        </TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Summa" Width="100" HorizontalAlignment="Left" Margin="10,6,0,0" FontSize="40" Background="#fadb" />
+        <Label Content="руб." Grid.Row="2" Grid.Column="1" FontSize="40" HorizontalAlignment="Center" Margin="-100,0,0,0" VerticalAlignment="Top" FontStyle="Italic" x:Name="Rub"/>
+        <Label Content="Итого:" Grid.Row="2" Grid.Column="0" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" FontStyle="Italic" x:Name="Itogo" />
+
+       
+        <Button Content="Оплата" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" Click="Button_Click" Margin="0,0,0,3"/>
     </Grid>
 </Page>

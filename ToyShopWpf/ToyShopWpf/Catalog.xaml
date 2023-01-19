@@ -24,24 +24,25 @@
        
 
         <StackPanel Grid.Row="1" Grid.Column="0" >
-            <Label Content="Машинка" FontSize="30" Margin="20" FontStyle="Italic" />
-            <Label Content="Кукла" FontSize="30" Margin="20,50,0,0" FontStyle="Italic"/>
-            <Label Content="Пазл" FontSize="30" Margin="20,85,0,0" FontStyle="Italic" />
+            <Label Content="Машинка" FontSize="30" Margin="20" FontStyle="Italic" x:Name="Car"/>
+            <Label Content="Кукла" FontSize="30" Margin="20,50,0,0" FontStyle="Italic" x:Name="Doll"/>
+            <Label Content="Пазл" FontSize="30" Margin="20,85,0,0" FontStyle="Italic" x:Name="Puzle" />
         </StackPanel>
         <StackPanel VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Height="390">
             <Image Source="Resources/logo.png" Height="100"/>
-            <Label Content="100 руб" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right"/>
+            <Label Content="100 руб" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right" />
             <Image Source="Resources/logo.png" Height="100"/>
             <Label Content="100 руб" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right"/>
             <Image Source="Resources/logo.png" Height="100"/>
             <Label Content="100 руб" FontSize="15" FontWeight="Bold" HorizontalAlignment="Right"/>
         </StackPanel>
-
-        <StackPanel   Grid.Row="1" Grid.Column="2">
-            <Button Click="Button_Click" Content="Купить" Margin="0,25,0,60"/>
-            <Button Click="Button_Click_2" Content="Купить" Margin="0,30,0,85"/>
-            <Button Click="Button_Click_3" Content="Купить" Margin="0,0,0,20"/>
-        </StackPanel>
-        
+        <Grid Grid.Column="2">
+        <CheckBox  Grid.Column="2" Content="Добавить в корзину" FontSize="16" Margin="0,30,0,0" FontStyle="Italic" x:Name="CarCheck" Checked="CarCheck_Checked" Unchecked="CarCheck_Unchecked" />
+        <CheckBox  Grid.Column="2" Content="Добавить в корзину" FontSize="16" Margin="0,160,0,0"  FontStyle="Italic" x:Name="CarDoll" Checked="CarDoll_Checked" Unchecked="CarDoll_Unchecked"/>
+        <CheckBox  Grid.Column="2" Content="Добавить в корзину" FontSize="16" Margin="0,300,0,0"  FontStyle="Italic" x:Name="CarPuzle" Checked="CarPuzle_Checked" Unchecked="CarPuzle_Unchecked"/>
+            </Grid>
+        <TextBox Height="20" Grid.Column="2" Margin="0,-220,0,0" x:Name="basketCar" Visibility="Hidden" />
+        <TextBox Height="20" Grid.Column="2" Margin="0,40,0,0" x:Name="basketDoll" Visibility="Hidden"/>
+        <TextBox Height="20" Grid.Column="2" Margin="0,300,0,0" x:Name="basketPuzle" Visibility="Hidden"/>
     </Grid>
 </Page>

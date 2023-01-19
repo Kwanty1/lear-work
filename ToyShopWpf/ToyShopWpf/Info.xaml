@@ -20,6 +20,12 @@
             <ColumnDefinition Width="400"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="в разработке" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="''ООО Марченко''" FontSize="30"  FontStyle="Italic" Margin="60,20,0,0"/>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Label  Content="Кубанская набережная 31/1" FontSize="30"  FontStyle="Italic"  />
+            <Label  Content="8-989-764-01-00" FontSize="30"  FontStyle="Italic" Margin="60,50,0,0"  />
+        </Grid>
+       
     </Grid>
 </Page>
